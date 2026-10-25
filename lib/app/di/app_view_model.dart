@@ -24,6 +24,33 @@ class AppViewModel extends ChangeNotifier {
   DateTime sessionStarted = DateTime.now();
   List<Lesson> get lessons =>
       child == null ? [] : content.forProfile(child!, settings);
+  List<Lesson> get practicedLessons => content.catalog.lessons
+      .where((l) => progress.steps.containsKey(l.id))
+      .toList();
+  int get completedLessonCount => practicedLessons
+      .where((l) => (progress.steps[l.id] ?? 0) >= l.steps.length)
+      .length;
+  List<Lesson> get reviewLessons => practicedLessons
+      .where(
+        (l) =>
+            progress.mastery[l.id]?.state(DateTime.now()) ==
+            MasteryState.needsReview,
+      )
+      .toList();
+  List<Subject> get practicedSubjects => content.catalog.subjects
+      .where((s) => practicedLessons.any((l) => l.subjectId == s.id))
+      .toList();
+  double get completionFraction {
+    final total = lessons.fold(0, (sum, lesson) => sum + lesson.steps.length);
+    if (total == 0) return 0;
+    final completed = lessons.fold(
+      0,
+      (sum, lesson) =>
+          sum + (progress.steps[lesson.id] ?? 0).clamp(0, lesson.steps.length),
+    );
+    return completed / total;
+  }
+
   Journey get journey => BuildDailyJourneyUseCase()(
     lessons,
     child!,

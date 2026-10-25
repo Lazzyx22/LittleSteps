@@ -16,3 +16,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/content/catalog.json
+  fonts:
+    - family: NotoDevanagari
+      fonts:
+        - asset: assets/fonts/NotoSansDevanagari.ttf

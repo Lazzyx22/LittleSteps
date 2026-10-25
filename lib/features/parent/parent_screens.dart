@@ -1,5 +1,4 @@
-import 'dart:async';
-import 'dart:math';
+import 'parent_gate_view_model.dart';
 import 'package:flutter/material.dart';
 import '../../app/di/app_view_model.dart';
 import '../../core/widgets/learning_widgets.dart';
@@ -28,6 +27,10 @@ class _ParentAreaState extends State<ParentArea> with WidgetsBindingObserver {
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     widget.model.parentUnlocked = false;
+    // Notify any parent route underneath after navigation finishes disposing us.
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => widget.model.lockParent(),
+    );
     super.dispose();
   }
 
@@ -63,65 +66,56 @@ class ParentGate extends StatefulWidget {
 
 class _ParentGateState extends State<ParentGate> {
   final answer = TextEditingController();
-  late final int a = 12 + Random().nextInt(12), b = 7 + Random().nextInt(9);
-  Timer? hold;
-  bool held = false;
-  String feedback = '';
+  late final model = ParentGateViewModel(widget.onUnlocked);
   @override
   void dispose() {
-    hold?.cancel();
+    model.dispose();
     answer.dispose();
     super.dispose();
   }
 
   @override
-  Widget build(BuildContext context) => LearningPage(
-    title: 'Grown-ups only',
-    children: [
-      const Text('Please ask a grown-up to open this area.'),
-      Semantics(
-        label: 'Hold for two seconds to begin adult check',
-        button: true,
-        child: Listener(
-          onPointerDown: (_) {
-            hold?.cancel();
-            hold = Timer(const Duration(seconds: 2), () {
-              if (mounted) setState(() => held = true);
-            });
-          },
-          onPointerUp: (_) => hold?.cancel(),
-          onPointerCancel: (_) => hold?.cancel(),
-          child: Container(
-            padding: const EdgeInsets.all(32),
-            decoration: BoxDecoration(
-              color: Colors.indigo.shade100,
-              borderRadius: BorderRadius.circular(24),
+  Widget build(BuildContext context) => ListenableBuilder(
+    listenable: model,
+    builder: (context, _) => LearningPage(
+      title: 'Grown-ups only',
+      children: [
+        const Text('Please ask a grown-up to open this area.'),
+        Semantics(
+          label: 'Hold for two seconds to begin adult check',
+          button: true,
+          child: Listener(
+            onPointerDown: (_) => model.startHold(),
+            onPointerUp: (_) => model.cancelHold(),
+            onPointerCancel: (_) => model.cancelHold(),
+            child: Container(
+              padding: const EdgeInsets.all(32),
+              decoration: BoxDecoration(
+                color: Colors.indigo.shade100,
+                borderRadius: BorderRadius.circular(24),
+              ),
+              child: Text(
+                model.held ? 'Adult check ready' : 'Hold here for 2 seconds',
+              ),
             ),
-            child: Text(held ? 'Adult check ready' : 'Hold here for 2 seconds'),
           ),
         ),
-      ),
-      if (held) ...[
-        Text('What is $a + $b?'),
-        TextField(
-          controller: answer,
-          keyboardType: TextInputType.number,
-          decoration: const InputDecoration(labelText: 'Adult answer'),
-        ),
-        FilledButton(
-          onPressed: () {
-            if (int.tryParse(answer.text.trim()) == a + b) {
-              widget.onUnlocked();
-            } else {
-              setState(() => feedback = 'Please try that sum again.');
-            }
-          },
-          child: const Text('Open parent area'),
-        ),
+        if (model.held) ...[
+          Text('What is ${model.a} + ${model.b}?'),
+          TextField(
+            controller: answer,
+            keyboardType: TextInputType.number,
+            decoration: const InputDecoration(labelText: 'Adult answer'),
+          ),
+          FilledButton(
+            onPressed: () => model.submit(answer.text),
+            child: const Text('Open parent area'),
+          ),
+        ],
+        if (model.feedback.isNotEmpty)
+          Semantics(liveRegion: true, child: Text(model.feedback)),
       ],
-      if (feedback.isNotEmpty)
-        Semantics(liveRegion: true, child: Text(feedback)),
-    ],
+    ),
   );
 }
 
@@ -130,17 +124,8 @@ class ParentDashboard extends StatelessWidget {
   final AppViewModel model;
   @override
   Widget build(BuildContext context) {
-    final practiced = model.content.catalog.lessons
-        .where((l) => model.progress.steps.containsKey(l.id))
-        .toList();
-    final completed = practiced
-        .where((l) => (model.progress.steps[l.id] ?? 0) >= l.steps.length)
-        .length;
-    final review = practiced.where(
-      (l) =>
-          model.progress.mastery[l.id]?.state(DateTime.now()) ==
-          MasteryState.needsReview,
-    );
+    final completed = model.completedLessonCount;
+    final review = model.reviewLessons;
     return LearningPage(
       title: 'Parent dashboard',
       children: [
@@ -155,10 +140,7 @@ class ParentDashboard extends StatelessWidget {
           'Daily goal: ${model.settings.dailyTimeGoal} minutes. A guide, never a requirement.',
         ),
         const Text('Recently practiced subjects'),
-        for (final id in practiced.map((l) => l.subjectId).toSet())
-          Text(
-            model.content.catalog.subjects.firstWhere((s) => s.id == id).title,
-          ),
+        for (final subject in model.practicedSubjects) Text(subject.title),
         const Text('Concepts to revisit'),
         for (final l in review) Text(l.title),
         if (review.isEmpty) const Text('No review suggestions yet.'),

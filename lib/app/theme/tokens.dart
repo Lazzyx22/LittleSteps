@@ -8,6 +8,7 @@ abstract final class Tokens {
       icon = 44;
   static const Duration animation = Duration(milliseconds: 220);
   static ThemeData theme() => ThemeData(
+    fontFamilyFallback: const ['NotoDevanagari'],
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff28766e)),
     scaffoldBackgroundColor: const Color(0xfffff8ed),
@@ -15,6 +16,18 @@ abstract final class Tokens {
       bodyLarge: TextStyle(fontSize: 20),
       bodyMedium: TextStyle(fontSize: 18),
       titleLarge: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        minimumSize: const Size(64, 64),
+        textStyle: const TextStyle(fontSize: 18),
+      ),
+    ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        minimumSize: const Size(64, 64),
+        textStyle: const TextStyle(fontSize: 20),
+      ),
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(

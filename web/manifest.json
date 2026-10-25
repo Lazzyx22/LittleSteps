@@ -1,11 +1,11 @@
 {
-    "name": "little_steps",
-    "short_name": "little_steps",
+    "name": "LittleSteps",
+    "short_name": "LittleSteps",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#fff8ed",
+    "theme_color": "#28766e",
+    "description": "Original learning adventures for little explorers.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

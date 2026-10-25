@@ -63,6 +63,11 @@ class ChildHome extends StatelessWidget {
           large: child.isPreschool,
           onTap: () => open(AppRoutes.progress),
         ),
+        LinearProgressIndicator(
+          value: model.completionFraction,
+          semanticsLabel: 'Learning steps explored',
+        ),
+        Text('${model.completedLessonCount} learning stars earned'),
         TextButton(
           onPressed: () {
             model.leaveChild();
