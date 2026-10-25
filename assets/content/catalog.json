@@ -1,0 +1,1370 @@
+{
+  "version": 1,
+  "subjects": [
+    {
+      "id": "english",
+      "title": "English",
+      "symbol": "ABC"
+    },
+    {
+      "id": "maths",
+      "title": "Maths",
+      "symbol": "123"
+    },
+    {
+      "id": "hindi",
+      "title": "Hindi",
+      "symbol": "अ"
+    },
+    {
+      "id": "science",
+      "title": "Science & Nature",
+      "symbol": "☘"
+    },
+    {
+      "id": "world",
+      "title": "World Around Us",
+      "symbol": "◎"
+    },
+    {
+      "id": "life",
+      "title": "Life Skills",
+      "symbol": "♡"
+    },
+    {
+      "id": "stories",
+      "title": "Stories",
+      "symbol": "▤"
+    },
+    {
+      "id": "art",
+      "title": "Art & Creativity",
+      "symbol": "✎"
+    }
+  ],
+  "topics": [
+    {
+      "id": "colors",
+      "subjectId": "art",
+      "title": "A pocket of colors"
+    },
+    {
+      "id": "shapes",
+      "subjectId": "maths",
+      "title": "Shape picnic"
+    },
+    {
+      "id": "counting",
+      "subjectId": "maths",
+      "title": "Five tiny steps"
+    },
+    {
+      "id": "animals",
+      "subjectId": "science",
+      "title": "Little animal friends"
+    },
+    {
+      "id": "habits",
+      "subjectId": "life",
+      "title": "Bubble hands"
+    },
+    {
+      "id": "feelings",
+      "subjectId": "life",
+      "title": "Feelings have names"
+    },
+    {
+      "id": "abc",
+      "subjectId": "english",
+      "title": "Letters on a walk"
+    },
+    {
+      "id": "hindi_p",
+      "subjectId": "hindi",
+      "title": "अ से अनार — demo"
+    },
+    {
+      "id": "world_p",
+      "subjectId": "world",
+      "title": "Our nearby park"
+    },
+    {
+      "id": "story_p",
+      "subjectId": "stories",
+      "title": "The little paper boat"
+    },
+    {
+      "id": "nouns",
+      "subjectId": "english",
+      "title": "Name detectives"
+    },
+    {
+      "id": "verbs",
+      "subjectId": "english",
+      "title": "Words that move"
+    },
+    {
+      "id": "reading",
+      "subjectId": "english",
+      "title": "A seed for Noor"
+    },
+    {
+      "id": "place",
+      "subjectId": "maths",
+      "title": "Tens and ones"
+    },
+    {
+      "id": "addition",
+      "subjectId": "maths",
+      "title": "Add the garden pebbles"
+    },
+    {
+      "id": "subtraction",
+      "subjectId": "maths",
+      "title": "Sharing pencils"
+    },
+    {
+      "id": "patterns",
+      "subjectId": "maths",
+      "title": "A growing trail"
+    },
+    {
+      "id": "plants",
+      "subjectId": "science",
+      "title": "A plant from roots to leaves"
+    },
+    {
+      "id": "water",
+      "subjectId": "science",
+      "title": "A drop on a journey"
+    },
+    {
+      "id": "weather",
+      "subjectId": "science",
+      "title": "Sky notebook"
+    },
+    {
+      "id": "road",
+      "subjectId": "life",
+      "title": "Pause at the road"
+    },
+    {
+      "id": "emotions",
+      "subjectId": "life",
+      "title": "A pause for feelings"
+    },
+    {
+      "id": "hindi_g",
+      "subjectId": "hindi",
+      "title": "शब्दों की छोटी दुनिया — demo"
+    },
+    {
+      "id": "world_g",
+      "subjectId": "world",
+      "title": "People who help"
+    },
+    {
+      "id": "story_g",
+      "subjectId": "stories",
+      "title": "The shared shade"
+    },
+    {
+      "id": "art_g",
+      "subjectId": "art",
+      "title": "A circle can become…"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "colors",
+      "subjectId": "art",
+      "topicId": "colors",
+      "title": "A pocket of colors",
+      "ageBands": [
+        "preschool3"
+      ],
+      "objectives": [
+        "Red, blue and yellow brighten our day. A red kite, blue sky, yellow sun!"
+      ],
+      "difficulty": 1,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "Red, blue and yellow brighten our day. A red kite, blue sky, yellow sun!"
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Which one is red?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "🔴 Red"
+              },
+              {
+                "id": "1",
+                "text": "🔵 Blue"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "The red circle is the color of our kite."
+          }
+        },
+        {
+          "type": "coloring",
+          "text": "Give the round balloon a color."
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "shapes",
+      "subjectId": "maths",
+      "topicId": "shapes",
+      "title": "Shape picnic",
+      "ageBands": [
+        "preschool3"
+      ],
+      "objectives": [
+        "A circle is round. A square has four equal sides. A triangle has three sides."
+      ],
+      "difficulty": 1,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "A circle is round. A square has four equal sides. A triangle has three sides."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Find the triangle",
+            "answers": [
+              {
+                "id": "0",
+                "text": "△ Triangle"
+              },
+              {
+                "id": "1",
+                "text": "○ Circle"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Count the three sides of △."
+          }
+        },
+        {
+          "type": "matching",
+          "text": "Tap a shape, then its name.",
+          "pairs": {
+            "△": "Triangle",
+            "□": "Square",
+            "○": "Circle"
+          }
+        },
+        {
+          "type": "tracing",
+          "text": "Start at the dot and trace a circle.",
+          "path": "circle"
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "counting",
+      "subjectId": "maths",
+      "topicId": "counting",
+      "title": "Five tiny steps",
+      "ageBands": [
+        "preschool3"
+      ],
+      "objectives": [
+        "Count with me: 1, 2, 3, 4, 5. Five toes take five tiny steps."
+      ],
+      "difficulty": 1,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "Count with me: 1, 2, 3, 4, 5. Five toes take five tiny steps."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "1  ?  3 — what is missing?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "2"
+              },
+              {
+                "id": "1",
+                "text": "4"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Say one, TWO, three."
+          }
+        },
+        {
+          "type": "dragDrop",
+          "text": "Put the fruit in the basket.",
+          "categories": {
+            "Apple": "Basket",
+            "Banana": "Basket"
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "animals",
+      "subjectId": "science",
+      "topicId": "animals",
+      "title": "Little animal friends",
+      "ageBands": [
+        "preschool3"
+      ],
+      "objectives": [
+        "A dog says woof. A cat says meow. An elephant has a long trunk."
+      ],
+      "difficulty": 1,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "A dog says woof. A cat says meow. An elephant has a long trunk."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Who has a long trunk?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "Elephant"
+              },
+              {
+                "id": "1",
+                "text": "Cat"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "An elephant uses its trunk to reach and drink."
+          }
+        },
+        {
+          "type": "matching",
+          "text": "Match the grown-up and baby.",
+          "pairs": {
+            "Dog": "Puppy",
+            "Cat": "Kitten"
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "habits",
+      "subjectId": "life",
+      "topicId": "habits",
+      "title": "Bubble hands",
+      "ageBands": [
+        "preschool3"
+      ],
+      "objectives": [
+        "Wet your hands. Add soap. Rub palms, backs, fingers and thumbs. Rinse and dry. Ask an adult to help."
+      ],
+      "difficulty": 1,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "Wet your hands. Add soap. Rub palms, backs, fingers and thumbs. Rinse and dry. Ask an adult to help."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "What helps wash our hands?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "Soap"
+              },
+              {
+                "id": "1",
+                "text": "Sand"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Soap and water wash our hands."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Wash your hands with an adult. Sing a short song while you rub."
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "feelings",
+      "subjectId": "life",
+      "topicId": "feelings",
+      "title": "Feelings have names",
+      "ageBands": [
+        "preschool3"
+      ],
+      "objectives": [
+        "Happy, sad and angry are feelings. Every feeling is welcome. Take a slow breath and tell a trusted grown-up."
+      ],
+      "difficulty": 1,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "Happy, sad and angry are feelings. Every feeling is welcome. Take a slow breath and tell a trusted grown-up."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "A smile can show…",
+            "answers": [
+              {
+                "id": "0",
+                "text": "Happy"
+              },
+              {
+                "id": "1",
+                "text": "Sad"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "A smile often shows happiness. People can show feelings differently."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "abc",
+      "subjectId": "english",
+      "topicId": "abc",
+      "title": "Letters on a walk",
+      "ageBands": [
+        "preschool3"
+      ],
+      "objectives": [
+        "A is for ant. B is for boat. C is for cup. Let us find A, B and C."
+      ],
+      "difficulty": 1,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "A is for ant. B is for boat. C is for cup. Let us find A, B and C."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Which letter starts boat?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "B"
+              },
+              {
+                "id": "1",
+                "text": "A"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Boat begins with B."
+          }
+        },
+        {
+          "type": "tracing",
+          "text": "Follow the letter-like mountain path.",
+          "path": "letter"
+        },
+        {
+          "type": "tracing",
+          "text": "Follow the line.",
+          "path": "line"
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "hindi_p",
+      "subjectId": "hindi",
+      "topicId": "hindi_p",
+      "title": "अ से अनार — demo",
+      "ageBands": [
+        "preschool3"
+      ],
+      "objectives": [
+        "अ से अनार। This is a small Hindi letter demo. Ask an adult to read it with you."
+      ],
+      "difficulty": 1,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "अ से अनार। This is a small Hindi letter demo. Ask an adult to read it with you."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Find अ",
+            "answers": [
+              {
+                "id": "0",
+                "text": "अ"
+              },
+              {
+                "id": "1",
+                "text": "ब"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "अ is the first choice."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "world_p",
+      "subjectId": "world",
+      "topicId": "world_p",
+      "title": "Our nearby park",
+      "ageBands": [
+        "preschool3"
+      ],
+      "objectives": [
+        "Trees give shade. Paths help us walk through the park. Stay near your grown-up."
+      ],
+      "difficulty": 1,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "Trees give shade. Paths help us walk through the park. Stay near your grown-up."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Where can a tree give shade?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "Park"
+              },
+              {
+                "id": "1",
+                "text": "Cup"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "A tree can grow in a park."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "story_p",
+      "subjectId": "stories",
+      "topicId": "story_p",
+      "title": "The little paper boat",
+      "ageBands": [
+        "preschool3"
+      ],
+      "objectives": [
+        "A paper boat rested in a bowl. Mira gave it a tiny leaf passenger. Together they imagined a quiet lake."
+      ],
+      "difficulty": 1,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "story",
+          "text": "A paper boat rested in a bowl. Mira gave it a tiny leaf passenger. Together they imagined a quiet lake."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Who rode in the paper boat?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "A leaf"
+              },
+              {
+                "id": "1",
+                "text": "A bus"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "The tiny leaf was the passenger."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "nouns",
+      "subjectId": "english",
+      "topicId": "nouns",
+      "title": "Name detectives",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "A noun names a person, place, animal or thing. Garden and rabbit are nouns."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "A noun names a person, place, animal or thing. Garden and rabbit are nouns."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Which word is a noun?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "Garden"
+              },
+              {
+                "id": "1",
+                "text": "Jump"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Garden names a place."
+          }
+        },
+        {
+          "type": "dragDrop",
+          "text": "Sort words into noun and verb.",
+          "categories": {
+            "Garden": "Noun",
+            "Rabbit": "Noun",
+            "Run": "Verb",
+            "Sing": "Verb"
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "verbs",
+      "subjectId": "english",
+      "topicId": "verbs",
+      "title": "Words that move",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "A verb tells what someone does. Birds glide. Children read. Glide and read are verbs."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "A verb tells what someone does. Birds glide. Children read. Glide and read are verbs."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Which word is an action?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "Read"
+              },
+              {
+                "id": "1",
+                "text": "Book"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Read tells what someone does."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "subjectId": "english",
+      "topicId": "reading",
+      "title": "A seed for Noor",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "Noor planted a seed in a small pot. Each morning she checked the soil. When it felt dry, she added water. A green shoot appeared."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "Noor planted a seed in a small pot. Each morning she checked the soil. When it felt dry, she added water. A green shoot appeared."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Why did Noor add water?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "The soil felt dry"
+              },
+              {
+                "id": "1",
+                "text": "The pot was loud"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "The passage says she watered when the soil felt dry."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "place",
+      "subjectId": "maths",
+      "topicId": "place",
+      "title": "Tens and ones",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "The number 34 has 3 tens and 4 ones. Three bundles of ten make thirty."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "The number 34 has 3 tens and 4 ones. Three bundles of ten make thirty."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "How many tens are in 34?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "3"
+              },
+              {
+                "id": "1",
+                "text": "4"
+              },
+              {
+                "id": "2",
+                "text": "7"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "34 is 30 + 4, so it has three tens."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "addition",
+      "subjectId": "maths",
+      "topicId": "addition",
+      "title": "Add the garden pebbles",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "There are 12 pebbles near a pot and 5 near a tree. Together there are 17."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "There are 12 pebbles near a pot and 5 near a tree. Together there are 17."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "12 + 5 = ?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "17"
+              },
+              {
+                "id": "1",
+                "text": "15"
+              },
+              {
+                "id": "2",
+                "text": "7"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "12 plus 5 is 17."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "subtraction",
+      "subjectId": "maths",
+      "topicId": "subtraction",
+      "title": "Sharing pencils",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "There are 18 pencils. We give 6 to a friend. 12 pencils remain."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "There are 18 pencils. We give 6 to a friend. 12 pencils remain."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "18 − 6 = ?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "12"
+              },
+              {
+                "id": "1",
+                "text": "24"
+              },
+              {
+                "id": "2",
+                "text": "14"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Taking six from eighteen leaves twelve."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "patterns",
+      "subjectId": "maths",
+      "topicId": "patterns",
+      "title": "A growing trail",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "Look at 2, 4, 6, 8. Each number grows by two."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "Look at 2, 4, 6, 8. Each number grows by two."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "What comes next: 2, 4, 6, 8, …?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "10"
+              },
+              {
+                "id": "1",
+                "text": "9"
+              },
+              {
+                "id": "2",
+                "text": "12"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Add two to eight to get ten."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "plants",
+      "subjectId": "science",
+      "topicId": "plants",
+      "title": "A plant from roots to leaves",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "Roots take in water. The stem supports the plant. Leaves help it make food using light."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "Roots take in water. The stem supports the plant. Leaves help it make food using light."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Which part takes in water?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "Roots"
+              },
+              {
+                "id": "1",
+                "text": "Flower"
+              },
+              {
+                "id": "2",
+                "text": "Petal"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Roots take water from the soil."
+          }
+        },
+        {
+          "type": "matching",
+          "text": "Match each plant part to its job.",
+          "pairs": {
+            "Roots": "Take in water",
+            "Stem": "Support",
+            "Leaves": "Make food"
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "subjectId": "science",
+      "topicId": "water",
+      "title": "A drop on a journey",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "Water can be liquid, solid ice, or water vapor in the air. We can save water by closing a running tap."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "Water can be liquid, solid ice, or water vapor in the air. We can save water by closing a running tap."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "What is solid water called?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "Ice"
+              },
+              {
+                "id": "1",
+                "text": "Steam"
+              },
+              {
+                "id": "2",
+                "text": "Sand"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Frozen water is ice."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "weather",
+      "subjectId": "science",
+      "topicId": "weather",
+      "title": "Sky notebook",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "Weather describes conditions such as sunny, cloudy, rainy or windy. Notice the sky with an adult."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "Weather describes conditions such as sunny, cloudy, rainy or windy. Notice the sky with an adult."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Moving air is called…",
+            "answers": [
+              {
+                "id": "0",
+                "text": "Wind"
+              },
+              {
+                "id": "1",
+                "text": "Rock"
+              },
+              {
+                "id": "2",
+                "text": "Soil"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Wind is air in motion."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "road",
+      "subjectId": "life",
+      "topicId": "road",
+      "title": "Pause at the road",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "Stop away from the edge. Cross at a marked crossing with a trusted adult. Look and listen; keep checking while crossing."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "Stop away from the edge. Cross at a marked crossing with a trusted adult. Look and listen; keep checking while crossing."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Who should help you cross?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "A trusted adult"
+              },
+              {
+                "id": "1",
+                "text": "A passing pet"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Ask a trusted adult to help you cross safely."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "emotions",
+      "subjectId": "life",
+      "topicId": "emotions",
+      "title": "A pause for feelings",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "When a task feels hard, pause, breathe slowly and ask for help. Feelings give us clues about what we need."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "When a task feels hard, pause, breathe slowly and ask for help. Feelings give us clues about what we need."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "What can help when frustrated?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "Pause and ask for help"
+              },
+              {
+                "id": "1",
+                "text": "Hide every feeling"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "A pause and support can help us try again."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "hindi_g",
+      "subjectId": "hindi",
+      "topicId": "hindi_g",
+      "title": "शब्दों की छोटी दुनिया — demo",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "पानी means water. पेड़ means tree. This is a Unicode demonstration, not a complete Hindi curriculum."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "पानी means water. पेड़ means tree. This is a Unicode demonstration, not a complete Hindi curriculum."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Which word means water?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "पानी"
+              },
+              {
+                "id": "1",
+                "text": "पेड़"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "पानी means water."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "world_g",
+      "subjectId": "world",
+      "topicId": "world_g",
+      "title": "People who help",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "Librarians help us find books. Gardeners care for plants. We can thank people who help our community."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "Librarians help us find books. Gardeners care for plants. We can thank people who help our community."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Who helps us find library books?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "Librarian"
+              },
+              {
+                "id": "1",
+                "text": "Pilot"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "A librarian helps readers find books."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "story_g",
+      "subjectId": "stories",
+      "topicId": "story_g",
+      "title": "The shared shade",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "Asha and Dev built a small shade for their seedlings. Asha tied the sticks while Dev held them steady. Together they finished before the hot afternoon."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "story",
+          "text": "Asha and Dev built a small shade for their seedlings. Asha tied the sticks while Dev held them steady. Together they finished before the hot afternoon."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "How did they finish the shade?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "They worked together"
+              },
+              {
+                "id": "1",
+                "text": "They hid the sticks"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "Each child helped with a different part."
+          }
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    },
+    {
+      "id": "art_g",
+      "subjectId": "art",
+      "topicId": "art_g",
+      "title": "A circle can become…",
+      "ageBands": [
+        "grade2"
+      ],
+      "objectives": [
+        "A circle can become a planet, a fruit or a balloon. Choose a color and invent a story about your picture."
+      ],
+      "difficulty": 2,
+      "estimatedMinutes": 3,
+      "steps": [
+        {
+          "type": "animation",
+          "text": "A circle can become a planet, a fruit or a balloon. Choose a color and invent a story about your picture."
+        },
+        {
+          "type": "imageChoice",
+          "question": {
+            "prompt": "Which tool can add color?",
+            "answers": [
+              {
+                "id": "0",
+                "text": "A crayon"
+              },
+              {
+                "id": "1",
+                "text": "A ruler only"
+              }
+            ],
+            "correctId": "0",
+            "explanation": "A crayon can add color to a picture."
+          }
+        },
+        {
+          "type": "coloring",
+          "text": "Invent a balloon color."
+        },
+        {
+          "type": "offlineActivity",
+          "text": "Tell someone what you discovered."
+        }
+      ]
+    }
+  ]
+}
