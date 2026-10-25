@@ -36,8 +36,9 @@ class BuildDailyJourneyUseCase {
               progress.mastery[a.id]!.lastPracticed!,
             ),
           );
-    if (recent.isNotEmpty)
+    if (recent.isNotEmpty) {
       add('Practice again', (l) => l.id == recent.first.id);
+    }
     add(
       'Review',
       (l) => progress.mastery[l.id]?.state(now) == MasteryState.needsReview,
@@ -83,12 +84,14 @@ class TracePoint {
 class TracingEvaluator {
   static List<TracePoint> path(String kind) => List.generate(60, (i) {
     final t = i / 59;
-    if (kind == 'circle')
+    if (kind == 'circle') {
       return TracePoint(.5 + .32 * cos(t * 2 * pi), .5 + .32 * sin(t * 2 * pi));
-    if (kind == 'letter')
+    }
+    if (kind == 'letter') {
       return t < .5
           ? TracePoint(.2 + .6 * t, .8 - 1.2 * t)
           : TracePoint(.5 + .6 * (t - .5), .2 + 1.2 * (t - .5));
+    }
     return TracePoint(.15 + .7 * t, .5);
   });
   static double completion(
