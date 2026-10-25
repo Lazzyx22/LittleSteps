@@ -12,8 +12,9 @@ class PreferencesStore implements LocalStore {
   Future<String?> read(String key) async => preferences.getString(key);
   @override
   Future<void> write(String key, String value) async {
-    if (!await preferences.setString(key, value))
+    if (!await preferences.setString(key, value)) {
       throw StateError('Could not save local learning data');
+    }
   }
 }
 

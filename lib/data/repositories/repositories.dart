@@ -56,8 +56,9 @@ class ProgressRepository {
       final j = jsonDecode(raw) as Map<String, dynamic>;
       final steps = Map<String, int>.from(j['steps'] as Map);
       final seconds = Map<String, int>.from(j['seconds'] as Map? ?? {});
-      if (steps.values.any((n) => n < 0) || seconds.values.any((n) => n < 0))
+      if (steps.values.any((n) => n < 0) || seconds.values.any((n) => n < 0)) {
         throw const FormatException('Negative progress');
+      }
       return _cache[child] = Progress(
         steps: steps,
         seconds: seconds,

@@ -136,13 +136,16 @@ class ConceptMastery {
   final DateTime? lastPracticed;
   MasteryState state(DateTime now) {
     if (attemptCount == 0) return MasteryState.notStarted;
-    if (lastPracticed != null && now.difference(lastPracticed!).inDays >= 7)
+    if (lastPracticed != null && now.difference(lastPracticed!).inDays >= 7) {
       return MasteryState.needsReview;
+    }
     if (correctFirstAttempt >= 3) return MasteryState.mastered;
-    if (correctFirstAttempt + correctAfterHint >= 2)
+    if (correctFirstAttempt + correctAfterHint >= 2) {
       return MasteryState.practicing;
-    if (correctFirstAttempt + correctAfterHint > 0)
+    }
+    if (correctFirstAttempt + correctAfterHint > 0) {
       return MasteryState.learning;
+    }
     return MasteryState.introduced;
   }
 

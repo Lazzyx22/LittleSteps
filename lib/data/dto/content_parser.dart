@@ -47,10 +47,11 @@ class ContentParser {
             lessons.any((l) => l.id == id) ||
             !topics.any(
               (t) => t.id == j['topicId'] && t.subjectId == j['subjectId'],
-            ))
+            )) {
           throw const FormatException(
             'Invalid references, duplicate ID, or empty content',
           );
+        }
         lessons.add(
           Lesson(
             id: id,
@@ -90,8 +91,9 @@ class ContentParser {
           .toList();
       if (answers.length < 2 ||
           answers.map((a) => a.id).toSet().length != answers.length ||
-          !answers.any((a) => a.id == q['correctId']))
+          !answers.any((a) => a.id == q['correctId'])) {
         throw const FormatException('Invalid quiz answers');
+      }
       question = QuizQuestion(
         q['prompt'] as String,
         List.unmodifiable(answers),
@@ -108,11 +110,13 @@ class ContentParser {
     if (type == ActivityType.matching &&
         (pairs == null ||
             pairs.isEmpty ||
-            pairs.values.toSet().length != pairs.length))
+            pairs.values.toSet().length != pairs.length)) {
       throw const FormatException('Matching needs distinct pairs');
+    }
     if (type == ActivityType.dragDrop &&
-        (categories == null || categories.isEmpty))
+        (categories == null || categories.isEmpty)) {
       throw const FormatException('Drag/drop needs items');
+    }
     return LessonStep(
       type: type,
       text: j['text'] as String? ?? '',
