@@ -1,0 +1,12 @@
+.tooling/
+.dart_tool/
+.flutter-plugins-dependencies
+build/
+coverage/
+*.iml
+.idea/
+**/local.properties
+**/ephemeral/
+*.jks
+*.keystore
+.env
